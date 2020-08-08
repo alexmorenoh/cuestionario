@@ -1,0 +1,36 @@
+<%- include('partials/_header'); -%>
+<div class="container">
+    <div class="row">
+      <div class="col order-last">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>REGISTRO</th>
+              <th>Nombre</th>
+              <th>Usuario</th>
+              <th>Correo</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if (data) { %>
+              <% for(var i = 0; i < data.length; i++) { %>
+                <tr>
+                  <td><%= data[i].registro %></td>
+                  <td><%= data[i].fullname %></td>
+                  <td><%= data[i].username %></td>
+                  <td><%= data[i].correo %></td>
+                  <td>
+                    <a href="/update/<%= data[i].registro %>" class="btn btn-outline-info">Edit</a>
+                    <a href="/delete/<%= data[i].registro %>" class="btn btn-outline-danger">Delete</a>
+                  </td>
+                </tr>
+              <% } %>
+            <% } %>
+          </tbody>
+        </table>
+        <a href="/nuevoUser" class="btn btn-primary">AGREGAR ALUMNO</a>
+      </div>
+    </div>
+  </div>
+<%- include('partials/_footer'); -%>

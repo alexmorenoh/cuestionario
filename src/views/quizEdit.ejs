@@ -1,0 +1,35 @@
+<%- include('partials/_header'); -%>
+<div class="container mt-7">
+  <div class="row">
+    <div class="col-md-7 offset-md-3 card">
+      <div class="card-body">
+        <form action="/updateQuiz/<%= data.id_preg %>" method="POST">
+
+          <div class="form-group">
+            <input type="text" name="question" value="<%= data.question%>" placeholder="Nombre completo" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="resp_a" value="<%= data.resp_a%>" placeholder="usuario" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="resp_b" value="<%= data.resp_b%>" placeholder="correo" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="resp_c" value="<%= data.resp_c%>" placeholder="usuario" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="resp_d" value="<%= data.resp_d%>" placeholder="correo" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="resp_correct" value="<%= data.resp_correct%>" placeholder="correo" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">
+            GUARDAR PREGUNTA
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/_footer'); -%>

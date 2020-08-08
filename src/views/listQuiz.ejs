@@ -1,0 +1,40 @@
+<%- include('partials/_header'); -%>
+<div class="container">
+    <div class="row">
+      <div class="col order-last">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>Pregunta</th>
+              <th>Respuesta A</th>
+              <th>Respuesta B</th>
+              <th>Respuesta C</th>
+              <th>Respuesta D</th>
+              <th>Respuesta correcta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if (data) { %>
+              <% for(var i = 0; i < data.length; i++) { %>
+                <tr>
+                  <td><%= data[i].id_preg %></td>
+                  <td><%= data[i].question %></td>
+                  <td><%= data[i].resp_a %></td>
+                  <td><%= data[i].resp_b %></td>
+                  <td><%= data[i].resp_c %></td>
+                  <td><%= data[i].resp_d %></td>
+                  <td><%= data[i].resp_correct %></td>
+                  <td>
+                    <a href="/quizEdit/<%= data[i].id_preg %>" class="btn btn-outline-info"> Edit </a>
+                    <a href="/deleteQuiz/<%= data[i].id_preg %>" class="btn btn-outline-danger">Delete</a>
+                  </td>
+                </tr>
+              <% } %>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+<%- include('partials/_footer'); -%>

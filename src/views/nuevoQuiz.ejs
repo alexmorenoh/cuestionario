@@ -1,0 +1,33 @@
+<%- include('partials/_header'); -%>
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="card-body">
+          <form action="/addQuiz" method="POST">
+            <div class="form-group">      
+              <input type="text" name="question" placeholder="Pregunta" class="form-control" autofocus>
+            </div>
+            <div class="form-group">      
+              <input type="text" name="resp_a" placeholder="respuesta posible" class="form-control" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" name="resp_b" placeholder="respuesta posible" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="resp_c" placeholder="respuesta posible" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="resp_d" placeholder="respuesta posible" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="resp_correct" placeholder="respuesta correcta" class="form-control">
+              </div>
+            <button type="submit" class="btn btn-primary">
+              GUARDAR PREGUNTA
+            </button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/_footer'); -%>

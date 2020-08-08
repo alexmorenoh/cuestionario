@@ -1,0 +1,152 @@
+<%- include('partials/_header'); -%>
+<div class="container mt-5">
+    <div class="row">
+      <div class="col order-last">
+        <% if (data) { %>
+          <form action="/addExam" method="POST">
+
+            <div class="input-group mb-3">      
+                <input type="number" pattern=".{8,8}" name="registro" size="10" placeholder="Llenar Registro" class="form-control"  autofocus required="required">
+            </div>
+            <div class="form-group">
+                <div class="pregunta">
+                    <span style="color: blue;""><%= data[0].id_preg %>.</span>
+                    <%= data[0].question %>  <br>
+                    <ul>
+                    <li><input type="radio" name="p1" value="a">  <%= data[0].resp_a %></li>
+                    <li><input type="radio" name="p1" value="b">  <%= data[0].resp_b %></li>
+                    <li><input type="radio" name="p1" value="c">  <%= data[0].resp_c %></li>
+                    <li><input type="radio" name="p1" value="d">  <%= data[0].resp_d %></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="pregunta">
+                    <span style="color: blue;""><%= data[1].id_preg %>.</span>
+                    <%= data[1].question %>  <br>
+                    <ul>
+                    <li><input type="radio" name="p2" value="a">  <%= data[1].resp_a %></li>
+                    <li><input type="radio" name="p2" value="b">  <%= data[1].resp_b %></li>
+                    <li><input type="radio" name="p2" value="c">  <%= data[1].resp_c %></li>
+                    <li><input type="radio" name="p2" value="d">  <%= data[1].resp_d %></li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div class="form-group">
+                <div class="pregunta">
+                    <span style="color: blue;""><%= data[2].id_preg %>.</span>
+                    <%= data[2].question %>  <br>
+                    <ul>
+                    <li><input type="radio" name="p3" value="a">  <%= data[2].resp_a %></li>
+                    <li><input type="radio" name="p3" value="b">  <%= data[2].resp_b %></li>
+                    <li><input type="radio" name="p3" value="c">  <%= data[2].resp_c %></li>
+                    <li><input type="radio" name="p3" value="d">  <%= data[2].resp_d %></li>
+                    </ul>
+                </div>
+            </div>           
+            
+            
+            <div class="form-group">
+                <div class="pregunta">
+                    <span style="color: blue;""><%= data[3].id_preg %>.</span>
+                    <%= data[3].question %>  <br>
+                    <ul>
+                    <li><input type="radio" name="p4" value="a">  <%= data[3].resp_a %></li>
+                    <li><input type="radio" name="p4" value="b">  <%= data[3].resp_b %></li>
+                    <li><input type="radio" name="p4" value="c">  <%= data[3].resp_c %></li>
+                    <li><input type="radio" name="p4" value="d">  <%= data[3].resp_d %></li>
+                    </ul>
+                </div>
+            </div>
+                        
+            <div class="form-group">
+                <div class="pregunta">
+                    <span style="color: blue;""><%= data[4].id_preg %>.</span>
+                    <%= data[4].question %>  <br>
+                    <ul>
+                    <li><input type="radio" name="p5" value="a">  <%= data[4].resp_a %></li>
+                    <li><input type="radio" name="p5" value="b">  <%= data[4].resp_b %></li>
+                    <li><input type="radio" name="p5" value="c">  <%= data[4].resp_c %></li>
+                    <li><input type="radio" name="p5" value="d">  <%= data[4].resp_d %></li>
+                    </ul>
+                </div>
+            </div>
+                
+            <div class="form-group">
+                <div class="pregunta">
+                    <span style="color: blue;""><%= data[5].id_preg %>.</span>
+                    <%= data[5].question %>  <br>
+                    <ul>
+                    <li><input type="radio" name="p6" value="a">  <%= data[5].resp_a %></li>
+                    <li><input type="radio" name="p6" value="b">  <%= data[5].resp_b %></li>
+                    <li><input type="radio" name="p6" value="c">  <%= data[5].resp_c %></li>
+                    <li><input type="radio" name="p6" value="d">  <%= data[5].resp_d %></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="pregunta">
+                    <span style="color: blue;""><%= data[6].id_preg %>.</span>
+                    <%= data[6].question %>  <br>
+                    <ul>
+                    <li><input type="radio" name="p7" value="a">  <%= data[6].resp_a %></li>
+                    <li><input type="radio" name="p7" value="b">  <%= data[6].resp_b %></li>
+                    <li><input type="radio" name="p7" value="c">  <%= data[6].resp_c %></li>
+                    <li><input type="radio" name="p7" value="d">  <%= data[6].resp_d %></li>
+                    </ul>
+                </div>
+            </div>  
+                    
+            <div class="form-group">
+                <div class="pregunta">
+                    <span style="color: blue;""><%= data[7].id_preg %>.</span>
+                    <%= data[7].question %>  <br>
+                    <ul>
+                    <li><input type="radio" name="p8" value="a">  <%= data[7].resp_a %></li>
+                    <li><input type="radio" name="p8" value="b">  <%= data[7].resp_b %></li>
+                    <li><input type="radio" name="p8" value="c">  <%= data[7].resp_c %></li>
+                    <li><input type="radio" name="p8" value="d">  <%= data[7].resp_d %></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="pregunta">
+                    <span style="color: blue;""><%= data[8].id_preg %>.</span>
+                    <%= data[8].question %>  <br>
+                    <ul>
+                    <li><input type="radio" name="p9" value="a">  <%= data[8].resp_a %></li>
+                    <li><input type="radio" name="p9" value="b">  <%= data[8].resp_b %></li>
+                    <li><input type="radio" name="p9" value="c">  <%= data[8].resp_c %></li>
+                    <li><input type="radio" name="p9" value="d">  <%= data[8].resp_d %></li>
+                    </ul>
+                </div>
+            </div>
+                    
+            <div class="form-group">
+                <div class="pregunta">
+                    <span style="color: blue;""><%= data[9].id_preg %>.</span>
+                    <%= data[9].question %>  <br>
+                    <ul>
+                    <li><input type="radio" name="p10" value="a">  <%= data[9].resp_a %></li>
+                    <li><input type="radio" name="p10" value="b">  <%= data[9].resp_b %></li>
+                    <li><input type="radio" name="p10" value="c">  <%= data[9].resp_c %></li>
+                    <li><input type="radio" name="p10" value="d">  <%= data[9].resp_d %></li>
+                    </ul>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              TERMINAR
+            </button>
+
+          </form>
+        <% } %>
+    </div>
+  </div>
+</div>
+<%- include('partials/_footer'); -%>

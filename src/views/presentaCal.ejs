@@ -1,0 +1,29 @@
+<%- include('partials/_header'); -%>
+<div class="container">
+    <div class="row">
+      <div class="col order-last">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>REGISTRO</th>
+              <th>CALIFICACION</th>
+              <th>TIEMPO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if (data) { %>
+              <% for(var i = 0; i < data.length; i++) { %>
+                <tr>
+                  <td><%= data[i].registro_cal %></td>
+                  <td><%= data[i].cal_T %></td>
+                  <td><%= data[i].fin_exam - data[i].ini_exam %></td>
+                </tr>
+              <% } %>
+            <% } %>
+          </tbody>
+        </table>
+        <a href="/verCal" class="btn btn-primary">BUSCAR NUEVO</a>
+      </div>
+    </div>
+  </div>
+<%- include('partials/_footer'); -%>
